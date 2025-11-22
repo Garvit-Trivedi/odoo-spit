@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 # odoo spit
-=======
+
 # StockMaster - Inventory Management System
+
+# backend deployment link : https://odoo-spit-1.onrender.com
 
 A comprehensive Inventory Management System built with the MERN stack (MongoDB, Express, React, Node.js) that digitizes and streamlines all stock-related operations within a business.
 
