@@ -135,7 +135,7 @@ router.post('/',
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, sku, category, unitOfMeasure, description, reorderLevel, reorderQuantity, initialStock } = req.body;
+    const { name, sku, category, unitOfMeasure, description, reorderLevel, reorderQuantity, initialStock, costPrice, sellingPrice } = req.body;
 
     // Check if SKU already exists
     const skuExists = await Product.findOne({ sku: sku.toUpperCase() });
@@ -151,7 +151,9 @@ router.post('/',
       description,
       reorderLevel: reorderLevel || 0,
       reorderQuantity: reorderQuantity || 0,
-      initialStock: initialStock || 0
+      initialStock: initialStock || 0,
+      costPrice: costPrice || 0,
+      sellingPrice: sellingPrice || 0
     });
 
     res.status(201).json({ success: true, product });

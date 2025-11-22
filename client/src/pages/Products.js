@@ -213,10 +213,16 @@ const Products = () => {
                       <span>Rs {product.costPrice.toFixed(2)} / {product.unitOfMeasure}</span>
                     </div>
                   )}
-                  {product.costPrice > 0 && product.stock !== undefined && (
+                  {product.sellingPrice !== undefined && (
                     <div className="detail-item">
-                      <span className="label">Product Worth:</span>
-                      <span className="product-worth">Rs {((product.costPrice || 0) * (product.stock || 0)).toFixed(2)}</span>
+                      <span className="label">Price:</span>
+                      <span>Rs {Number(product.sellingPrice || 0).toFixed(2)} / {product.unitOfMeasure}</span>
+                    </div>
+                  )}
+                  {product.sellingPrice !== undefined && product.stock !== undefined && (
+                    <div className="detail-item">
+                      <span className="label">Overall Worth:</span>
+                      <span className="product-worth">Rs {((Number(product.sellingPrice) || 0) * (product.stock || 0)).toFixed(2)}</span>
                     </div>
                   )}
                   {product.reorderLevel > 0 && (
