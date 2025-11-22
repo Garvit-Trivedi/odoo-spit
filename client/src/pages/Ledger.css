@@ -1,0 +1,118 @@
+.ledger-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ledger-table {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.ledger-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.ledger-table thead {
+  background-color: #f9fafb;
+}
+
+.ledger-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ledger-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.ledger-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.document-type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ledger-table .positive {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.ledger-table .negative {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.ledger-table .balance {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.ledger-table small {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.adjustment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quantity-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.quantity-group > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quantity-group label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.quantity-group input.readonly {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.quantity-group input.readonly.positive {
+  color: #10b981;
+}
+
+.quantity-group input.readonly.negative {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .filters-section {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+}
+
